@@ -7,31 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_logo"
+        style="@style/Logo"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/txt_description_image"
+        android:src="@mipmap/ic_icon_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_title_logo"
+        style="@style/TextViewTitle"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_title_form"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/txt_title_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_logo">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_text"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="@string/input_text"
         android:inputType="text"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_form"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_text1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="@string/input_text1"
         android:inputType="text"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_text"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_click_result"
+        style="@style/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -41,6 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_text1">
 
-    </Button>
+    </com.google.android.material.button.MaterialButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,8 +21,6 @@ class MainActivity : AppCompatActivity()
         input_text = findViewById(R.id.input_text)
         input_text1 = findViewById(R.id.input_text1)
         btn_click_result = findViewById(R.id.btn_click_result)
-        var input_text_string = input_text.text.toString()
-        var input_text1_string = input_text1.text.toString()
 
         fun checkEquals(string1: String, string2: String): List<String>
         {

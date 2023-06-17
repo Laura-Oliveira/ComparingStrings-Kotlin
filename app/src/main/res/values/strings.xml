@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Flutter_Teste</string>
-    <string name="input_text">Texto</string>
-    <string name="input_text1">Texto 1</string>
-    <string name="btn_click_result">Resultado</string>
+    <string name="app_name">Justa</string>
+    <string name="txt_title_form">Encontro os valores em comum entre duas listas de texto</string>
+    <string name="input_text">Insira aqui o texto da primeira lista</string>
+    <string name="input_text1">Insira aqui o texto da segunda lista</string>
+    <string name="txt_description_image">Justa Logo</string>
+    <string name="btn_click_result">Ver Resultado</string>
 </resources>
