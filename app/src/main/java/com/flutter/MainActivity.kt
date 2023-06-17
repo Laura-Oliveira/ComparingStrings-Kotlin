@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity()
         input_text = findViewById(R.id.input_text)
         input_text1 = findViewById(R.id.input_text1)
         btn_click_result = findViewById(R.id.btn_click_result)
-        var input_text_string = input_text.toString()
-        var input_text1_string = input_text1.toString()
+        var input_text_string = input_text.text.toString()
+        var input_text1_string = input_text1.text.toString()
 
         fun checkEquals(string1: String, string2: String): List<String>
         {
@@ -36,17 +36,17 @@ class MainActivity : AppCompatActivity()
                 }
             }
 
-            Log.d("listString", commonChars.toString())
+            Log.d("listString", commonChars.joinToString { "," })
             return commonChars
         }
 
         fun showToast(strings: List<String>) {
-            val message = strings.joinToString(", ")
+            val message = strings.filter { it.isNotBlank() }.joinToString(", ")
             Toast.makeText(this@MainActivity, message, Toast.LENGTH_LONG).show()
         }
 
         btn_click_result.setOnClickListener {
-            val commonStringResult = checkEquals(input_text_string,input_text1_string)
+            val commonStringResult = checkEquals(input_text.text.toString(), input_text1.text.toString())
             showToast(commonStringResult)
         }
 
